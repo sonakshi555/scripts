@@ -1,6 +1,6 @@
 # scripts
 
-# cron job scheduler
+# cron job scheduler is add
 
 
 crontab -e
@@ -21,3 +21,4 @@ crontab -r    # Remove all cron jobs (be careful!)
 Monitor the cron job
 # Watch the log file in real-time
 tail -f ~/cloud/scripts/tracker.log
+cat cat ~/cloud/scripts/tracker.log
