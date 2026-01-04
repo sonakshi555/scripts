@@ -14,11 +14,18 @@ crontab -e
 │ └─────── 9 AM (hour 9)
 └───────── 0 minutes past the hour
 
+
 crontab -l    # List your cron jobs
+
+
 crontab -e    # Edit your cron jobs
+
+
 crontab -r    # Remove all cron jobs (be careful!)
 
-Monitor the cron job
+
 # Watch the log file in real-time
 tail -f ~/cloud/scripts/tracker.log
+
+
 cat cat ~/cloud/scripts/tracker.log
