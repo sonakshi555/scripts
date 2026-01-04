@@ -1,0 +1,123 @@
++ set -e
++ set -o
+allexport      	off
+braceexpand    	on
+emacs          	off
+errexit        	on
+errtrace       	off
+functrace      	off
+hashall        	on
+histexpand     	off
+history        	off
+ignoreeof      	off
+interactive-comments	on
+keyword        	off
+monitor        	off
+noclobber      	off
+noexec         	off
+noglob         	off
+nolog          	off
+notify         	off
+nounset        	off
+onecmd         	off
+physical       	off
+pipefail       	off
+posix          	off
+privileged     	off
+verbose        	off
+vi             	off
+xtrace         	on
++ aws s3 ls
+2026-01-02 16:35:41 s0nakshi
+2026-01-02 17:05:14 s0nakshi1
++ aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --output text
++ aws lambda list-functions
+{
+    "Functions": []
+}
++ aws iam list-users
+{
+    "Users": []
+}
++ set -e
++ set -o
+allexport      	off
+braceexpand    	on
+emacs          	off
+errexit        	on
+errtrace       	off
+functrace      	off
+hashall        	on
+histexpand     	off
+history        	off
+ignoreeof      	off
+interactive-comments	on
+keyword        	off
+monitor        	off
+noclobber      	off
+noexec         	off
+noglob         	off
+nolog          	off
+notify         	off
+nounset        	off
+onecmd         	off
+physical       	off
+pipefail       	off
+posix          	off
+privileged     	off
+verbose        	off
+vi             	off
+xtrace         	on
++ aws s3 ls
+2026-01-02 16:35:41 s0nakshi
+2026-01-02 17:05:14 s0nakshi1
++ aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --output text
++ aws lambda list-functions
+{
+    "Functions": []
+}
++ aws iam list-users
+{
+    "Users": []
+}
++ set -e
++ set -o
+allexport      	off
+braceexpand    	on
+emacs          	off
+errexit        	on
+errtrace       	off
+functrace      	off
+hashall        	on
+histexpand     	off
+history        	off
+ignoreeof      	off
+interactive-comments	on
+keyword        	off
+monitor        	off
+noclobber      	off
+noexec         	off
+noglob         	off
+nolog          	off
+notify         	off
+nounset        	off
+onecmd         	off
+physical       	off
+pipefail       	off
+posix          	off
+privileged     	off
+verbose        	off
+vi             	off
+xtrace         	on
++ aws s3 ls
+2026-01-02 16:35:41 s0nakshi
+2026-01-02 17:05:14 s0nakshi1
++ aws ec2 describe-instances --query 'Reservations[].Instances[].InstanceId' --output text
++ aws lambda list-functions
+{
+    "Functions": []
+}
++ aws iam list-users
+{
+    "Users": []
+}

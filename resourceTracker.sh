@@ -11,7 +11,7 @@
 
 set -x # Enable debugging
 set -e # Exit on error
-set -o # Catch errors in pipelines
+# set -o # Catch errors in pipelines
 
 # to get S3 buckets list
 aws s3 ls
