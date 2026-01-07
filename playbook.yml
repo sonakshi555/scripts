@@ -1,0 +1,16 @@
+--- # these 3 dashes are important,meaning the start of a YAML document 
+- name: Install and start nginx
+  hosts: all
+  become: true   # Use privilege escalation , it can be sudo or others based on your configuration
+
+  -tasks:
+    - name: install nginx
+      apt :
+        name: nginx
+        state: present
+
+    - name: start nginx service
+      service: # these can be replaced with "shell: systemctl start nginx"
+        name: nginx
+        state: started
+        enabled: true
