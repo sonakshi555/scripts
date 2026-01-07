@@ -38,14 +38,14 @@ cat cat ~/cloud/scripts/tracker.log
 
 # Ansible
 
-adhoc commands : used for single and simple task execution like nproc , touch
+=> adhoc commands : used for single and simple task execution like nproc , touch
 
-inventory : the file which has the IP address of all the target servers
+=> inventory : the file which has the IP address of all the target servers
 
 ex : ansible -i inventory -m "shell" -a "touch file1.txt"
 
 
-Playbook : are used to configure and push the more than one tasks to all other targets
+=> Playbook : are used to configure and push the more than one tasks to all other targets
 
 ex: ansible-playbook -i inventory playbook.yml
 
