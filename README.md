@@ -91,4 +91,6 @@ Go to your system terminal ,paste the below code
 
 ``` ssh <ip_address_of_target>```
 
+You will be connected to target system but for ansible you don't need to connect to target as the inventory file will have the ip_address of all the files
+
 All set for passwordless authenticaion 🎉🎉
