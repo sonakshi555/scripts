@@ -3,7 +3,7 @@
 # cron job scheduler
 
 
-crontab -e
+``` crontab -e```
 
 
 0 9 * * * resourceTracker.sh >> tracker.log 2>&1
@@ -21,19 +21,19 @@ crontab -e
 └───────── 0 minutes past the hour
 
 
-crontab -l    # List your cron jobs
+```crontab -l    # List your cron jobs```
 
-crontab -e    # Edit your cron jobs
+```crontab -e    # Edit your cron jobs```
 
-crontab -r    # Remove all cron jobs (be careful!)
+```crontab -r    # Remove all cron jobs (be careful!)```
 
 
 Watch the log file in real-time
 
 
-tail -f ~/cloud/scripts/tracker.log
+```tail -f ~/cloud/scripts/tracker.log```
 
-cat cat ~/cloud/scripts/tracker.log
+ ```cat ~/cloud/scripts/tracker.log```
 
 
 # Ansible
@@ -42,12 +42,12 @@ cat cat ~/cloud/scripts/tracker.log
 
 => inventory : the file which has the IP address of all the target servers
 
-ex : ansible -i inventory -m "shell" -a "touch file1.txt"
+```ansible -i inventory -m "shell" -a "touch file1.txt"```
 
 
 => Playbook : are used to configure and push the more than one tasks to all other targets
 
-ex: ansible-playbook -i inventory playbook.yml
+```ansible-playbook -i inventory playbook.yml ```
 
 -v or -vv or -vvv : provides information about whats happening behind in more deatil
 
@@ -59,6 +59,36 @@ ex: ansible-playbook -i inventory playbook.yml
 
 Ansible Roles are the standard way to organize and reuse automation content (tasks, variables, files, handlers) into a structured, modular format, making complex playbooks manageable and shareable. They enforce a specific directory layout (like tasks/main.yml, vars/, files/) for consistency, enabling teams to build reusable toolkits for specific functions (e.g., web server setup) that can be easily shared via Ansible Galaxy or within projects
 
-example: ansible-galaxy role init Kubernetes
+```ansible-galaxy role init Kubernetes```
 
 folder named Kubernetes is created with bunch of files and floders , which helps in writing complex ansible playbook 
+
+
+# Passwordless authentication
+
+For push tasks to all the target system, their should be passwordless authentication for ansible.
+Follow steps to create passwordless authentication
+
+``` ssh-keygen -t rsa ```
+
+
+it was ask some secret phrase.
+
+Go to file where ssh_id is stored, file name can be seen in output of the keygen command
+
+
+open and copy the ssh_id in ssh_id.pub file
+
+
+
+Move to the target system open 
+
+```vim ~/<path> /.ssh/authorized_keys```
+
+paste your ssh_id and press esc and type ":wq" ,press enter
+
+Go to your system terminal ,paste the below code
+
+``` ssh <ip_address_of_target>```
+
+All set for passwordless authenticaion 🎉🎉
